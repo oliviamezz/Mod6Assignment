@@ -1,39 +1,33 @@
+import javax.swing.JOptionPane;
 /**
- A class that holds a grade for assessment.
+ This program demonstrates the Exam class,
+ which extends the Assessment class.
  */
 public class Assessment {
     private int score;  // Numeric score
 
     /**
-     The setScore method sets the score field.
-     @param s The value to store in score.
+     * The setScore method sets the score field.
+     * @param s The value to store in score.
      */
-
-    public void setScore(int s)
-    {
+    public void setScore(int s) {
         this.score = s;
-    }
+    }//ends set Score
 
     /**
-     The getScore method returns the score.
-     @return The value stored in the score field.
+     * The getScore method returns the score.
+     * @return The value stored in the score field.
      */
-
-    public int getScore()
-    {
+    public int getScore() {
         return this.score;
-    }
+    }//ends getScore
 
     /**
-     The getGrade method returns a letter grade
-     determined from the score field.
-     @return The letter grade.
+     * The getGrade method returns a letter grade determined from the score field.
+     * @return The letter grade.
      */
-
-    public char getGrade()
-    {
+    public char getGrade() {
         char letterGrade;
-        //use switch statement to determine letter grade from score
         switch (this.score / 10) {
             case 10:
             case 9:
@@ -51,11 +45,7 @@ public class Assessment {
             default:
                 letterGrade = 'F';
                 break;
-        }
-
-
-
-
+        }//ends switch
         return letterGrade;
-    }
-}
+    }//ends getGrade
+}//ends Assessment

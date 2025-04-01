@@ -1,8 +1,6 @@
-/**
- A class representing an exam that extends Assessment.
- */
+/***/
 public class Exam extends Assessment {
-    //Stores number of questions, missed questions, and points
+    //Store variables
     private int numQuestions;
     private int numMissed;
     private double pointsEach;
@@ -13,21 +11,19 @@ public class Exam extends Assessment {
      * @param questions Total number of questions on the exam.
      * @param missed    Number of questions missed.
      */
-
     public Exam(int questions, int missed) {
         this.numQuestions = questions;
         this.numMissed = missed;
         calculateScore();
-    }//ends Exam
+    }//ends Exame
 
     /**
      * Calculates points per question and overall score.
      */
-
     private void calculateScore() {
         pointsEach = 100.0 / numQuestions;
         double numericScore = 100.0 - (numMissed * pointsEach);
-        super.setScore((int) numericScore);  // Corrected: Calls parent class's setScore method
+        super.setScore((int) numericScore);  // Calls parent class's setScore method
     }//ends calculateScore
 
     /**
@@ -36,6 +32,8 @@ public class Exam extends Assessment {
      * @return Points for each question.
      */
     public double getPointsEach() {
+        //Returns the points per question
         return pointsEach;
-    }//ends getPointsEach
-}//Ends file
+    }//ends get pointsEach
+}//ends Exam
+
